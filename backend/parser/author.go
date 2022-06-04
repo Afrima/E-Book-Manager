@@ -17,6 +17,7 @@ func GetAuthor(metaData epubReader.Metadata, metaIdMap map[string]map[string]epu
 		if author != "" {
 			if creator.ID == "" || metaIdMap["#"+creator.ID] == nil {
 				authors = append(authors, author)
+				break
 			} else if metaIdMap["#"+creator.ID]["role"].Text == "aut" {
 				authors = append(authors, author)
 			}

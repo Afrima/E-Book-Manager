@@ -44,6 +44,7 @@ entity authors {
 entity author2_books {
   *author_id uint
   *book_id uint
+  type string
 }
 
 entity subject2_books {
